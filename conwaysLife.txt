@@ -1,0 +1,47 @@
+public class conwaysLife {
+  //set size of game matrix
+  private int width = 10;
+  //Main process
+  public static void main (String[] args){
+    //Create matrix of cells for play
+    cell[] cellMatrix = new cell[width*width];
+    boolean status;
+    int[] coord = new int[2];
+    for (int i : cellMatrix) {
+      if (math.random() > 0.5) {
+        status = true;
+      } else {
+        status = false;
+      }
+      coord[0] = (i % width);
+      coord[1] = math.floor(i/width);
+      cellMatrix(i).setAlive(status);
+      cellMatrix(i).setXYCo(coord);
+    }
+    //play game
+    //no return
+  }
+}
+
+public class cell {
+  //properties of each cell
+  private boolean alive = false;
+  private int[] xyCo = new int[2];
+
+  //Get requests for properties of cell
+  public boolean getAlive() {
+    return alive;
+  }
+  public int[] getXYCo() {
+    return xyCo;
+  }
+  //Set requests for properties of cell    
+  public void setAlive(boolean status) {
+    //set alive status
+    alive = status;
+  }
+  public int[] setXYCo(int[] coord) {
+    //set xy coordinates of cell
+    xyCo = coord;
+  }
+}
