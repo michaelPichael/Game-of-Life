@@ -105,8 +105,10 @@ class gameHelper {
 		2: Any live cell with two or three live neighbours lives on to the next generation.
 		3: Any live cell with more than three live neighbours dies, as if by overpopulation.
 		4: Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction. */
+		int numNeighbors;
 		for (int x = 0; x < cellMatrix.length; x++) {
 			for (int y = 0; y < cellMatrix[x].length; y++) {
+				numNeighbors = cellMatrix[x][y].getNumNeighbors();
 				if (cellMatrix[x][y].getAlive() && (numNeighbors==2 || numNeighbors==3)) {
 					cellMatrix[x][y].setTempAlive(true);	
 				} else if (!cellMatrix[x][y].getAlive() && numNeighbors==3) {
