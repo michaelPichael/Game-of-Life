@@ -3,9 +3,7 @@ public class conwaysLife {
 	static int depth = 10;
 	static boolean willBeAlive = false;
 	static int numNeighbors = 0;
-	static int nX = 0;
-	static int nY = 0;
-	cell[][] cellMatrix = new cell[depth][depth];
+	static cell[][] cellMatrix = new cell[depth][depth];
 
 	//Main process
  	public static void main (String[] args){
@@ -78,6 +76,8 @@ class gameHelper {
 
 	//Static methods for gameplay
 	public static void checkNeighbors(cell[][] cellMatrix) {
+		int nX = 0;
+		int nY = 0;
 		/* During the first loop through the matrix we check to see which cells
 		will be alive during the next cycle and then set a temporary state 
 		variable to the next state for loading later */
