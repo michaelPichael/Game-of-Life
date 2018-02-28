@@ -13,7 +13,7 @@ public class conwaysLife {
 		//enter game loop
 		for (int i = 0; i < 10; i++) {
 			//Check if cells should live into new generation
-			gameHelper.checkNeighbors(cellMatrix);
+			gameHelper.checkNeighbors(cellMatrix, depth);
 			gameHelper.loadTempState(cellMatrix);
 			//Set the next state of the cells
 			gameHelper.loadCurrentState(cellMatrix);
@@ -75,7 +75,7 @@ class gameHelper {
 	}
 
 	//Static methods for gameplay
-	public static void checkNeighbors(cell[][] cellMatrix) {
+	public static void checkNeighbors(cell[][] cellMatrix, int depth) {
 		int nX = 0;
 		int nY = 0;
 		/* During the first loop through the matrix we check to see which cells
