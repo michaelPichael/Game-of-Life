@@ -23,6 +23,7 @@ public class conwaysLife {
 			gameHelper.printToScreen(cellMatrix);
 		}
 	}
+}
 
 //CELL CLASS
 class cell {
