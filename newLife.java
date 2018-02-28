@@ -122,7 +122,7 @@ class gameHelper {
 	public static void loadCurrentState(cell[][] cellMatrix) {
 		for (int x = 0; x < cellMatrix.length; x++) {
 			for (int y = 0; y < cellMatrix[x].length; y++) {
-				cellMatrix[x][y].setAlive(cellMatrix[x][y].getTempAlive);
+				cellMatrix[x][y].setAlive(cellMatrix[x][y].getTempAlive());
 			}
 		}
 	}
@@ -131,7 +131,7 @@ class gameHelper {
 		String printString = "";
 		for (int x = 0; x < cellMatrix.length; x++) {
 			for (int y = 0; y < cellMatrix[x].length; y++) {
-				if (cellMatrix[x][y].getAlive) {
+				if (cellMatrix[x][y].getAlive()) {
 					printString = printString.concat("O");
 				} else {
 					printString = printString.concat(" ");
