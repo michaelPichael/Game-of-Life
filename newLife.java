@@ -13,7 +13,7 @@ public class conwaysLife {
 		cellMatrix = gameHelper.setupGame(cellMatrix);
 		gameHelper.printToScreen(cellMatrix);
 		//enter game loop
-		for (i = 0; i < 10; i++) {
+		for (int i = 0; i < 10; i++) {
 			//Check if cells should live into new generation
 			gameHelper.checkNeighbors(cellMatrix);
 			gameHelper.loadTempState(cellMatrix);
